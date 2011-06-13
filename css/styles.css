@@ -63,3 +63,7 @@ ul.term {
 ul.example {
 	list-style: circle;	
 }
+
+li.nobullet {
+	list-style: none;	
+}
