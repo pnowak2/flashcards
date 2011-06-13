@@ -1,0 +1,65 @@
+.note{
+	height:8em;
+	padding:.5em;
+	width:14em;
+	position:relative;
+	overflow:hidden;
+	cursor:pointer;
+
+	font-family:Trebuchet MS,Tahoma,Myriad Pro,Arial,Verdana,sans-serif;
+	font-size:1.3em;
+
+	/* Adding a CSS3 shadow below the note, in the browsers which support it: */
+	-moz-box-shadow:.1em .1em 0 #DDDDDD;
+	-webkit-box-shadow:.1em .1em 0 #DDDDDD;
+	box-shadow:.1em .1em 0 #DDDDDD;
+}
+
+/* Three styles for the notes: */
+
+.yellow {
+	background-color:#FDFB8C;
+	border:1px solid #DEDC65;
+}
+.category, .number {
+	top:1em;
+	color:#666666;
+	font-family:Arial,Verdana,sans-serif;
+	font-size:.6em;
+	position:absolute;
+}
+.category{
+	right:1em;
+}
+
+.number{
+	left:1em;
+}
+
+div.original, div.translated {
+	margin-left: 1em;	
+}
+
+div.translated {
+	display: none;	
+}
+
+ul.term, ul.example {
+	margin-left: 1em;	
+}
+
+ul.term {
+	margin-top: 2em;
+}
+
+ul.example {
+	margin-top: .5em;
+}
+
+ul.term {
+	list-style: disc;	
+}
+
+ul.example {
+	list-style: circle;	
+}
