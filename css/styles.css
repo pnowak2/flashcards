@@ -1,7 +1,7 @@
 .note{
-	height:8em;
+	height:14em;
 	padding:.5em;
-	width:14em;
+	width:24em;
 	position:relative;
 	overflow:hidden;
 	cursor:pointer;
@@ -23,7 +23,7 @@
 	font-size:.6em;
 	position:absolute;
 }
-.category{
+.category {
 	right:1em;
 }
 
@@ -31,8 +31,20 @@
 	left:1em;
 }
 
+.picture {
+	position: absolute;
+	top: 2.5em;
+	right: 1em;
+}
+
+.picture img {
+	width: 10em;
+}
+
 div.original, div.translated {
 	margin-left: 1em;	
+	position: absolute;
+	width: 13em;
 }
 
 div.translated {
