@@ -18,6 +18,12 @@
 					      arrow = {left: 37, up: 38, right: 39, down: 40 };
 
 					  switch (keyCode) {
+					    case arrow.up:
+					    	// up
+					    break;
+					    case arrow.down:
+					    	// down
+					    break;
 					    case arrow.left:
 					    	slider.goToPreviousSlide();
 					    break;
@@ -29,7 +35,7 @@
 				
 				$(".note").click(function(){
 					$(this).flip({
-						direction: "lr",
+						direction: "tb",
 						speed: 100,
 						color: $(this).css("background-color"),
 						onEnd: function(clone, element){
@@ -47,6 +53,8 @@
 
 	<body style="padding: 4em;"> 
 
+	<div id="flashcards" align="center" style="margin-top: 6em;">
+	
 		<ul id="slider">
 			<li>
 				<div class="note yellow">
@@ -100,7 +108,7 @@
 						<img src="img/eko.jpg"/>
 					</div>
 					<div class="category">Umys³</div>
-					<div class="number">1</div>
+					<div class="number">2</div>
 					<div class="read">&nbsp;</div>
 				</div>
 			</li>
@@ -129,12 +137,13 @@
 						<img src="img/bandage.jpg"/>
 					</div>
 					<div class="category">Umys³</div>
-					<div class="number">1</div>
+					<div class="number">3</div>
 					<div class="read">&nbsp;</div>
 				</div>
 			</li>
 		</ul>
 
+	</div>
 			
 
 	</body> 

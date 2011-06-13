@@ -92,6 +92,7 @@ li.nobullet {
 }
 
 #slider {
+	text-align: left;
 	padding: 0;
 	margin: 0;
 	list-style: none;
