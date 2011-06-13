@@ -1,3 +1,7 @@
+body {
+	background-color: #efefef;	
+}
+
 .note{
 	height:14em;
 	padding:.5em;
@@ -13,8 +17,8 @@
 /* Three styles for the notes: */
 
 .yellow {
-	background-color:#FDFB8C;
-	border:1px solid #DEDC65;
+	background-color:#fff;
+	border:1px solid #cfcfcf;
 }
 .category, .number {
 	top:1em;
@@ -31,14 +35,24 @@
 	left:1em;
 }
 
+.read {
+	background-image: url("../img/speaker.png");
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+}
+
 .picture {
 	position: absolute;
-	top: 2.5em;
+	bottom: 1em;
 	right: 1em;
 }
 
 .picture img {
-	width: 10em;
+	max-width: 10em;
+	max-height: 12em;
 }
 
 div.original, div.translated {
@@ -53,6 +67,7 @@ div.translated {
 
 ul.term, ul.example {
 	margin-left: 1em;	
+	font-weight: bold;
 }
 
 ul.term {
@@ -60,7 +75,7 @@ ul.term {
 }
 
 ul.example {
-	margin-top: .5em;
+	margin-top: 1.5em;
 }
 
 ul.term {
@@ -73,6 +88,7 @@ ul.example {
 
 li.nobullet {
 	list-style: none;	
+	font-weight: normal;
 }
 
 #slider {
@@ -86,4 +102,8 @@ li.nobullet {
 #slider li {
 	padding: 0;
 	margin: 0;
+}
+
+.bold {
+	font-weight: bold;	
 }
