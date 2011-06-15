@@ -27,10 +27,10 @@
 
 					  switch (keyCode) {
 					    case arrow.up:
-							flipNote($(".note:visible"), "bt");
+							flipNote($(".note:visible:last"), "bt");
 					    break;
 					    case arrow.down:
-					    	flipNote($(".note:visible"), "tb");
+					    	flipNote($(".note:visible:last"), "tb");
 					    break;
 					    case arrow.left:
 					    	$(".prev").click();
@@ -49,19 +49,7 @@
 				
 			});
 			
-			function flipNote(note, direction){
 
-					note.flip({
-						direction: direction,
-						speed: 100,
-						color: note.css("background-color"),
-						onBefore: function(clone, element){
-							element.find("div.original").toggle();
-							element.find("div.translated").toggle();
-						}
-					});	
-
-			}
 
 		</script> 
 		
@@ -97,8 +85,8 @@
 					<div class="picture">
 						<img src="img/egg08.jpg"/>
 					</div>
-					<div class="category">Umys³</div>
-					<div class="number">2</div>
+					<div class="category">Dom</div>
+					<div class="number">1</div>
 					<div class="read">&nbsp;</div>
 				</div>
 				
