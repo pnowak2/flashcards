@@ -51,8 +51,7 @@ body {
 }
 
 .picture img {
-	max-width: 10em;
-	max-height: 12em;
+	width: 9em;
 }
 
 div.original, div.translated {
