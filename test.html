@@ -16,7 +16,9 @@
 				$(".slides_container").width($(".note:first").outerWidth());
 				
 				var slides = $("#slides").slides({
-					generatePagination: false
+					generatePagination: false,
+					slideSpeed: 250,
+					effect: 'slide'
 				});
 				
 				$(document).keydown(function (e) {
@@ -25,10 +27,10 @@
 
 					  switch (keyCode) {
 					    case arrow.up:
-					    	// up
+							flipNote($(".note:visible"), "bt");
 					    break;
 					    case arrow.down:
-					    	// down
+					    	flipNote($(".note:visible"), "tb");
 					    break;
 					    case arrow.left:
 					    	$(".prev").click();
@@ -39,19 +41,27 @@
 					  }
 				});
 				
-				$(".note").click(function(){
-					$(this).flip({
-						direction: "tb",
+				$(".note").each(function(){
+					$(this).click(function(){
+						flipNote($(this), "tb");
+					});
+				});
+				
+			});
+			
+			function flipNote(note, direction){
+
+					note.flip({
+						direction: direction,
 						speed: 100,
-						color: $(this).css("background-color"),
-						onEnd: function(clone, element){
+						color: note.css("background-color"),
+						onBefore: function(clone, element){
 							element.find("div.original").toggle();
 							element.find("div.translated").toggle();
 						}
 					});	
-				});
-				
-			});
+
+			}
 
 		</script> 
 		
@@ -95,20 +105,20 @@
 				<div class="note">
 					<div class="original">
 						<ul class="term">
-							<li>ekolog</li>
-							<li class="nobullet">ekolodzy</li>
+							<li>mezczyzna</li>
+							<li class="nobullet">mezczyzni</li>
 						</ul>
 						<ul class="example">
-							<li>Ekolodzy protestuja przeciwko budowie autostrady.</li>
+							<li>To jest mezczyzna.</li>
 						</ul>
 					</div>
 					<div class="translated">
 						<ul class="term">
-							<li>der Umweltschutzer</li>
-							<li class="nobullet">die Umweltschutzer</li>
+							<li>der Mann</li>
+							<li class="nobullet">die Manner</li>
 						</ul>
 						<ul class="example">
-							<li>Die Umweltschutzer protestieren gegen den Bau der Autobahn.</li>
+							<li>Das ist ein Mann.</li>
 						</ul>
 					</div>
 					<div class="picture">
