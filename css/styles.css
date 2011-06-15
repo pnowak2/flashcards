@@ -51,6 +51,10 @@ body {
 	width: 9em;
 }
 
+a.next, a.prev {
+	display: none;
+}
+
 div.original, div.translated {
 	margin-left: 1em;	
 	position: absolute;
