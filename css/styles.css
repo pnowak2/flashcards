@@ -55,6 +55,14 @@ a.next, a.prev {
 	display: none;
 }
 
+a.prev {
+	
+}
+
+a.next {
+	
+}
+
 div.original, div.translated {
 	margin-left: 1em;	
 	position: absolute;
