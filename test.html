@@ -8,62 +8,16 @@
 		<script src="js/jquery-ui-1.8.13.custom.min.js" type="text/javascript"></script>
 		<script src="js/jquery.flip.min.js" type="text/javascript"></script>
 		<script src="js/slides.min.jquery.js" type="text/javascript"></script>
-		<script src="js/scripts.js" type="text/javascript"></script> 
-		
-		<script type="text/javascript">
-			$(function(){
-				
-				$(".slides_container").width($(".note:first").outerWidth());
-				
-				var slides = $("#slides").slides({
-					generatePagination: false,
-					slideSpeed: 250,
-					effect: 'slide'
-				});
-				
-				$(document).keydown(function (e) {
-					  var keyCode = e.keyCode || e.which,
-					      arrow = {left: 37, up: 38, right: 39, down: 40 };
-
-					  switch (keyCode) {
-					    case arrow.up:
-							flipNote($(".note:visible:last"), "bt");
-					    break;
-					    case arrow.down:
-					    	flipNote($(".note:visible:last"), "tb");
-					    break;
-					    case arrow.left:
-					    	$(".prev").click();
-					    break;
-					    case arrow.right:
-					    	$(".next").click();
-					    break;
-					  }
-				});
-				
-				$(".note").each(function(){
-					$(this).click(function(){
-						flipNote($(this), "tb");
-					});
-				});
-				
-			});
-			
-
-
-		</script> 
-		
+		<script src="js/scripts.js" type="text/javascript"></script> 	
 	</head>
 
-	<body style="padding: 4em;"> 
+	<body> 
 
-		<div id="slides" align="center" style="margin-top: 6em;">
-		
-		  	 <a href="#" class="prev">prev</a> 
+		<div id="slides" align="center">
 		
 			 <div class="slides_container">
 			 
-				<div class="note">
+				<div class="memocard">
 					<div class="original">
 						<ul class="term">
 							<li>ekolog</li>
@@ -83,14 +37,14 @@
 						</ul>
 					</div>
 					<div class="picture">
-						<img src="img/egg08.jpg"/>
+						<img src="img/eko.jpg"/>
 					</div>
 					<div class="category">Dom</div>
 					<div class="number">1</div>
 					<div class="read">&nbsp;</div>
 				</div>
 				
-				<div class="note">
+				<div class="memocard">
 					<div class="original">
 						<ul class="term">
 							<li>mezczyzna</li>
@@ -110,19 +64,41 @@
 						</ul>
 					</div>
 					<div class="picture">
-						<img src="img/eko.jpg"/>
+						<img src="img/egg08.jpg"/>
 					</div>
 					<div class="category">Umys³</div>
 					<div class="number">2</div>
 					<div class="read">&nbsp;</div>
 				</div>
 				
+				<div class="memocard">
+					<div class="original">
+						<ul class="term">
+							<li>cicho</li>
+						</ul>
+						<ul class="example">
+							<li>Jest bardzo cicho.</li>
+						</ul>
+					</div>
+					<div class="translated">
+						<ul class="term">
+							<li>leise</li>
+						</ul>
+						<ul class="example">
+							<li>Es ist sehr leise.</li>
+						</ul>
+					</div>
+					<div class="picture">
+						<img src="img/LizaMinelli.jpg"/>
+					</div>
+					<div class="category">Dzwieki</div>
+					<div class="number">3</div>
+					<div class="read">&nbsp;</div>
+				</div>
+				
 			 </div>
-
-			 <a href="#" class="next">next</a>
 			 
-		</div>
-		
+		</div>	
 
 	</body> 
 </html>
