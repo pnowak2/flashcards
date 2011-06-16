@@ -41,9 +41,12 @@ $(function(){
 	 * Slide navigation
 	 */
 	$("#slides").slides({
+		preload: true,
 		generatePagination: false,
 		generateNextPrev: true,
 		slideSpeed: 250,
+		fadeSpeed: 100,
+		crossfade: true,
 		effect: 'slide, fade',
 		slidesLoaded: function() {
 			$('div.memohint').animate({
@@ -59,6 +62,8 @@ $(function(){
 			$('div.memohint').animate({
 				bottom:0
 			},200);
+			$("ul.pagination li").removeClass("selectedCard");
+			$("ul.pagination li:nth-child(" + current + ")").addClass("selectedCard");
 		}
 	});
 });
