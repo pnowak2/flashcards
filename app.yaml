@@ -1,0 +1,10 @@
+application: memocardz
+version: secureable
+runtime: python
+api_version: 1
+
+handlers:
+- url: /app
+  static_dir: src
+
+
