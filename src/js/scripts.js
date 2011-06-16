@@ -43,8 +43,9 @@ $(function(){
 	$("#slides").slides({
 		preload: true,
 		generatePagination: false,
+		slideEasing: "easeOutCubic",
 		generateNextPrev: true,
-		slideSpeed: 250,
+		slideSpeed: 300,
 		fadeSpeed: 100,
 		crossfade: true,
 		effect: 'slide, fade',
