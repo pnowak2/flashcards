@@ -52,7 +52,7 @@ $(function(){
 		slidesLoaded: function() {
 			$('div.memohint').animate({
 				bottom:0
-			},200);
+			},100);
 		},
 		animationStart: function(current){
 			$('div.memohint').animate({
@@ -62,9 +62,7 @@ $(function(){
 		animationComplete: function(current){
 			$('div.memohint').animate({
 				bottom:0
-			},200);
-			$("ul.pagination li").removeClass("selectedCard");
-			$("ul.pagination li:nth-child(" + current + ")").addClass("selectedCard");
+			},100);
 		}
 	});
 });
