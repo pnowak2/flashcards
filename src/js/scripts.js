@@ -31,7 +31,7 @@ $(function(){
 	/*
 	 * Mouse flip
 	 */
-	$(".memocard").each(function(){
+	$("div.memocard").each(function(){
 		$(this).click(function(){
 			flipNote($(this), "tb");
 		});
@@ -40,7 +40,7 @@ $(function(){
 	/*
 	 * Slide navigation
 	 */
-	$("#slides").slides({
+	$("div#slides").slides({
 		preload: true,
 		generatePagination: false,
 		slideEasing: "easeOutCubic",
