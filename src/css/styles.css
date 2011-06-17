@@ -22,14 +22,13 @@ body {
 .memohint {
 	z-index: 50000;
 	position:absolute;
-	bottom:-4em;
 	left:.5em;
-	height:1.6em;
-	padding:.5em 1em 0 1em;
+	height:1em;
+	padding:.5em;
+	margin: 0;
 	background:#fff;
 	background:rgba(255,255,255,0);
 	font-size:.6em;
-	line-height:1.33;
 	text-shadow:none;
 	text-align: right;
 }
@@ -63,8 +62,9 @@ ul.pagination {
 	width: 24px;
 	height: 24px;
 	position: absolute;
-	bottom: 1em;
-	left: 1em;
+	bottom: .3em;
+	left: .5em;
+	display: none;
 }
 
 .picture {
@@ -75,6 +75,8 @@ ul.pagination {
 
 .picture img {
 	width: 8em;
+	padding: 0;
+	margin: 0;
 }
 
 a.next, a.prev {
